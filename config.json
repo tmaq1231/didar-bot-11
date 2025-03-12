@@ -20,11 +20,12 @@
     "61572247694097",
     "61573858162298",
     "61572658681308",
-    "100087391449883"
+    "100087391449883",
+    "61573029839707"
   ],
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": ["61572247694097"],
+    "whiteListIds": ["61572247694097","61573029839707"],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "🫨🩷𝙭𝙖𝙞𝙠𝙤-𝙍𝙖𝙢𝙗𝙤🫨🪿🪽",
