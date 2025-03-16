@@ -7,7 +7,7 @@ module.exports.config = {
   name: "bby",
   aliases: ["baby", "bbe", "babe"],
   version: "6.9.0",
-  author: "dipto",
+  author: "dipto/Rambo",
   countDown: 0,
   role: 0,
   description: "better then all sim simi",
@@ -141,19 +141,24 @@ module.exports.onReply = async ({ api, event, Reply }) => {
 
 module.exports.onChat = async ({ api, event,message }) => {
   try{
-    const body = event.body ? event.body.toLowerCase() : ""
+    const body = event.body ? event.body?.toLowerCase() : ""
     if(body.startsWith("baby") || body.startsWith("bby") || body.startsWith("janu")){
       const arr = body.replace(/^\S+\s*/, "")
-      if(!arr){ api.sendMessage("Yes 😀, i am here", event.threadID, (error, info) => {
-      global.GoatBot.onReply.set(info.messageID, {
+      const randomReplies = ["Yes 😀, I am Rambo chatbot here", "Hello baby!I am Shanjena Chatbot Here🌝", "এ ডাকবিনা তোর নানিরে খুজতাছি🌝🥲", "কি প্রোবলেম বে বেবি বেবি কস কেন কুন জন্মের বেবি তোর আমি😑"];
+      if(!arr){ 
+  
+   await api.sendMessage(randomReplies[Math.floor(Math.random() * randomReplies.length)], event.threadID, (error, info) => {
+     if(!info) message.reply("info obj not found")
+     global.GoatBot.onReply.set(info.messageID, {
         commandName: this.config.name,
         type: "reply",
         messageID: info.messageID,
         author: event.senderID
       });
-    }, event.messageID);}
+  }, event.messageID)
+    }
     const a = (await axios.get(`${await baseApiUrl()}/baby?text=${encodeURIComponent(arr)}&senderID=${event.senderID}&font=1`)).data.reply;
-    await api.sendMessage(a, event.threadID, (error, info) => {
+   await api.sendMessage(a, event.threadID, (error, info) => {
       global.GoatBot.onReply.set(info.messageID, {
         commandName: this.config.name,
         type: "reply",
@@ -161,8 +166,8 @@ module.exports.onChat = async ({ api, event,message }) => {
         author: event.senderID,
         a
       });
-    }, event.messageID);
+  }, event.messageID)
     }
   }catch(err){
-      return api.sendMessage(``, event.threadID, event.messageID);
+      return api.sendMessage(`Error: ${err.message}`, event.threadID, event.messageID);
     }};
