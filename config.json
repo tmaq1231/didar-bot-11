@@ -18,20 +18,14 @@
   },
   "adminBot": [
     "61572247694097",
-    "61573858162298",
-    "61572658681308",
-    "100087391449883",
-    "61573029839707",
-    "61574165318833",
-    "61571017966945"
   ],
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": ["61572247694097","61573029839707","61574165318833","61571017966945"],
+    "whiteListIds": ["61572247694097"],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "🫨🩷𝙭𝙖𝙞𝙠𝙤-𝙍𝙖𝙢𝙗𝙤🫨🪿🪽",
-  "prefix": "-",
+  "nickNameBot": "🫨🩷yöūr-bãby🫨🪿🪽",
+  "prefix": ".",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
@@ -42,7 +36,7 @@
   "timeZone": "Asia/Dhaka",
   "credentials": {
     "gmailAccount": {
-      "email": "romeobot555@gmail.com",
+      "email": "rambo12334cxly123@gmail.com",
       "clientId": "695328982889-v1t85ej9aq1fvv0n4alp7rcbea9gkgvf.apps.googleusercontent.com",
       "clientSecret": "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",
       "refreshToken": "1//04EyH1gbNUVv5CgYIARAAGAQSNwF-L9IrqcPCQD2QsuhCQ2XprHCTMrTnVPI6WvT9i73nnoi4XqfAD0_yDoGW_gtWUdIeVtANzao",
